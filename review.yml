@@ -1,0 +1,73 @@
+aid: simplii-financial
+name: Simplii Financial
+review:
+  question: Does Simplii Financial expose a first-party public developer API or developer portal?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Simplii Financial publishes no first-party public developer API and no
+    developer portal. Simplii is the no-fee direct banking brand of CIBC
+    (Canadian Imperial Bank of Commerce), a Big Six Schedule I domestic bank;
+    it is not separately chartered but operates as a division/trade name of
+    CIBC. A probe of developer.simplii.com returned no host (curl exit /
+    HTTP 000, no DNS resolution). No OpenAPI/Swagger, no API reference, and no
+    onboarding/console are published under the simplii.com domain. There is no
+    documented OAuth2/OIDC, API-key, or mTLS developer auth surface because
+    there is no public API to authenticate against.
+
+    Consumer financial-data access to Simplii accounts is aggregator- and
+    screen-scraping-based, not a first-party API: Plaid and Finicity list
+    Simplii among their Canadian coverage, and CIBC (the parent) has publicly
+    signed a data-access agreement with MX to reduce credential-sharing. This
+    is the honest, common posture for Canadian retail banks in the current
+    voluntary, pre-mandate environment.
+
+    Canada has no operational open-banking mandate. The federal Consumer-Driven
+    Banking framework (Budget 2024 and the Fall Economic Statement 2024,
+    overseen by the Financial Consumer Agency of Canada / FCAC) is legislated
+    but not yet live, so there is no FDX-style standardized data API and no
+    1033-equivalent right in force for Simplii. Any open-banking developer
+    sandbox in the CIBC group is attributable to the CIBC parent entity (a
+    separate provider record) and is partner-gated/private, not a public
+    self-serve Simplii API.
+  fdxParticipant: false
+  cdbPosture: >-
+    Canada's Consumer-Driven Banking framework is legislated (Budget 2024 /
+    FES 2024, FCAC-overseen) but not yet operational; Simplii publishes no
+    stated CDB or FDX-alignment position of its own as of the review date.
+  authModel: none-public
+  specProvenance: none
+  transports:
+  - protocol: REST
+    scheme: https
+    documented: false
+    note: No public REST developer API is documented under simplii.com. The only HTTPS surfaces are the retail banking website and the authenticated online/mobile banking application, which are not developer-consumable APIs.
+  - protocol: Aggregator
+    scheme: https
+    documented: true
+    note: Consumer data access is via third-party aggregators (Plaid, Finicity) and, at the CIBC parent level, an MX data-access agreement — screen-scraping / credential-based today, not a first-party API.
+  developerPortalProbe:
+  - url: https://developer.simplii.com
+    status: '000'
+    note: No DNS / connection failure — no developer portal host exists.
+  - url: https://www.simplii.com
+    status: '200'
+    note: Retail banking marketing and login site only; no developer/API section.
+sources:
+- url: https://www.simplii.com/en/home.html
+  type: Website
+  note: Retail banking site; no developer or API pages in footer or navigation.
+- url: https://www.simplii.com/en/legal.html
+  type: Documentation
+  note: Consolidated Legal and Privacy agreement page (terms + privacy); no API terms.
+- url: https://cibc.mediaroom.com/2017-08-16-CIBC-launches-new-direct-banking-brand-through-Simplii-Financial
+  type: PressRelease
+  note: CIBC launch of Simplii Financial as its direct banking brand (Aug 16, 2017), succeeding the PC Financial partnership.
+- url: https://www.openbankingtracker.com/provider/simplii-financial
+  type: ThirdPartyProfile
+  note: Open Banking Tracker profile; no first-party API listed, aggregator-supported access.
+- url: https://www.mx.com/news/cibc-to-enhance-secure-and-seamless-access-to-financial-tools-and-apps-for-clients-through-agreement-with-mx/
+  type: PressRelease
+  note: CIBC (Simplii's parent) data-access agreement with MX to move clients off credential-sharing — parent-level, not a Simplii first-party API.

@@ -1,0 +1,51 @@
+aid: simplii-financial
+url: https://raw.githubusercontent.com/api-evangelist/simplii-financial/refs/heads/main/apis.yml
+name: Simplii Financial
+kind: company
+description: >-
+  Simplii Financial is the no-fee direct banking brand of the Canadian Imperial
+  Bank of Commerce (CIBC), one of Canada's Big Six Schedule I domestic banks.
+  Launched November 1, 2017, Simplii succeeded CIBC's two-decade President's
+  Choice Financial (PC Financial) co-venture with Loblaws, migrating roughly two
+  million accounts to the new brand. Simplii is not a separately chartered bank;
+  it operates as a division and trade name of CIBC under CIBC's Schedule I federal
+  charter, offering no-fee daily chequing and savings, mortgages, personal loans,
+  lines of credit, GICs, mutual funds, and USD accounts through online, mobile,
+  and telephone channels only (no branches), with CDIC deposit insurance provided
+  through CIBC. On open finance, Simplii exposes no first-party public developer
+  API or developer portal; consumer financial-data access today is aggregator- and
+  screen-scraping-based via Plaid, Finicity, and MX (CIBC signed a data-access
+  agreement with MX), consistent with Canada's voluntary, pre-mandate posture
+  while the federal Consumer-Driven Banking framework (Budget 2024 / FES 2024,
+  overseen by the FCAC) is legislated but not yet operational.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Canada
+- Digital Bank
+- Direct Banking
+- Big Six
+- CIBC
+- Consumer-Driven Banking
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.simplii.com/en/home.html
+- type: Documentation
+  url: https://www.simplii.com/en/legal.html
+- type: TermsOfService
+  url: https://www.simplii.com/en/legal.html
+- type: PrivacyPolicy
+  url: https://www.simplii.com/en/legal.html
+- type: Support
+  url: https://www.simplii.com/en/contact-us.html
+- type: LinkedIn
+  url: https://www.linkedin.com/company/simplii-financial
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
