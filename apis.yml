@@ -43,7 +43,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Canada
 - Digital Bank
@@ -51,7 +51,6 @@ tags:
 - Big Six
 - CIBC
 - Consumer-Driven Banking
-- Data Aggregation
 tags_raw:
 - Financial Services
 - Banking
@@ -61,7 +60,7 @@ tags_raw:
 - Big Six
 - CIBC
 - Consumer-Driven Banking
-- Data Aggregation
+- Financial-Services
 created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
@@ -84,3 +83,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-tags-removed:
+- Data Aggregation
